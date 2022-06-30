@@ -1,0 +1,535 @@
+/* Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+    background-color: #4ea1c7;
+    color: #fff;
+    background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: .2em;
+    animation: fadeHeader ease 1.5s;
+    font-family: 'Crimson Text', serif;
+}
+
+h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    font-family: 'Crimson Text', serif;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-family: 'Crimson Text', serif;
+}
+
+.flex {
+    display: flex;
+    background-color: #181c3a;
+    background-image: radial-gradient( circle farthest-corner at 10.2% 55.8%,  rgba(252,37,103,1) 0%, rgba(250,38,151,1) 46.2%, rgba(186,8,181,1) 90.1% );
+    border-radius: 30px;
+    align-items: center;
+}
+
+/*  ==============
+        Header
+    ============== */
+
+header {
+    display: flex;
+    align-items: center;
+	justify-content: space-between;
+    height: 5em;
+    max-width: 1250px;
+    width: 78%;
+    margin: 0 auto;
+    animation: fadeHeader ease 1.5s;
+    font-family: 'Crimson Text', serif;
+}
+
+#donate-button {
+    background: #20180a;
+	color: #02fff2;
+	border: none;
+	border-radius: 20px;
+	width: 6em;
+	height: 2em;
+	margin-right: 20px;
+	cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+#donate-button:visited {
+    background: #f7bb50;
+	color: #090d27;
+}
+
+#donate-button:hover {
+    transition: background .75s;
+    background:#007eb8;
+    color: white;
+}
+
+#donate-button:active {
+    background: #f7bb50;
+    color: #090d27;
+}
+
+/* .nav-links {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+	list-style-type: none;
+    width: 50%;
+}
+.nav-link {
+	font-size: 1.2rem;
+    margin-left: 3em;
+}
+.nav-link a {
+	text-decoration: none;
+    color: white;
+}
+.nav-link a:hover {
+	color:#f7ba4f;
+	transition: color .3s;
+} */
+
+@keyframes fadeHeader {
+    0% {
+        opacity: 0;
+    }
+}
+
+/*  ==============
+        Main
+    ============== */
+
+.total-amounts {
+    text-align: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 1em 0;
+    align-items: baseline;
+    max-width: 1275px;
+    width: 78.5%;
+    margin: 0 auto;
+    animation: fadeIn 1.5s;
+}
+
+.supply-balance,
+.borrow-balance {
+    line-height: 1.5;
+}
+
+.supply-balance {
+    margin-left: 1.5em;
+}
+
+.borrow-balance {
+    margin-right: 1.5em;
+}
+
+.middle-totals {
+    background: linear-gradient(-45deg,#f8b94c, #e2c167);
+    border-radius: 30px;
+    padding: 1.5em 4.5em;
+}
+
+.liquid-event-text {
+    margin-top: .4em;
+}
+
+.borrow-balance-error {
+    color: rgb(250, 65, 65);
+    line-height: 1.2;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+}
+
+/*  ==============
+      Calculator
+    ============== */
+
+#google1 {
+    width: 10%;
+    height: 600px;
+    position: absolute;
+    /* background-color: #181c3a;; */
+    left: 0;
+}
+
+#google2 {
+    width: 10%;
+    height: 600px;
+    position: absolute;
+    /* background-color: #181c3a;; */
+    right: 0;
+}
+
+#asset-liquid {
+    width: 20%;
+    background-image: linear-gradient( 134.6deg,  rgba(201,37,107,1) 15.4%, rgba(116,16,124,1) 74.7% );
+    background-color: #181c3a;
+    border-radius: 30px;
+    padding: 2em 0;
+    animation: fadeInUp 1.5s;
+}
+
+.calculator {
+    width: 80%;
+    max-width: 1300px;
+    margin: 1.5em auto 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.calculator h2 {
+    height: 3em;
+}
+
+.actual-calculator {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.calc-containers {
+    width: 37%;
+    background-image: radial-gradient( circle farthest-corner at 83.7% 4.3%,  rgba(173,0,171,1) 0%, rgba(15,51,92,1) 90% );
+    background-color: #181c3a;
+    border-radius: 30px;
+    padding: 2em 1em;
+}
+
+.coin-flex {
+    display: flex;
+    align-items: center;
+    height: 3em;
+    justify-content: space-around;
+    margin-bottom: .5em;
+}
+
+.coin-and-ticker {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 13em;
+}
+
+.coin-and-ticker p {
+    margin-left: .8em;
+    font-size: .85rem;
+    font-family: 'Crimson', sans-serif;
+}
+
+.coin-and-ticker input {
+    margin-left: auto;
+    width: 8.5em;
+}
+
+.total-coin-price {
+    width: 8.3em;
+    line-height: 1.4;
+    font-size: .8rem;
+}
+
+.liquid {
+    justify-content: space-between;
+    margin: 0 auto .5em;
+    width: 9em;
+}
+
+.supply {
+    animation: fadeInRight 1.5s;
+}
+
+.borrow {
+    animation: fadeInLeft 1.5s;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+}
+
+/*  ==============
+        Footer
+    ============== */
+
+footer {
+    max-width: 1275px;
+    width: 78.5%;
+    margin: 2.5em auto 0;
+}
+
+.donation {
+    line-height: 2;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#donate {
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+#copyright {
+    text-align: right;
+    font-size: .9rem;
+}
+
+.contact {
+    text-align: right;
+}
+
+.contact a {
+    padding-left: 1em;
+}
+
+#creator {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+/*  ==============
+    Media Queries
+    ============== */
+
+/* Low res Laptop */
+@media (max-width: 1240px) {
+    header {
+        width: 90%;
+    }
+
+    .total-amounts {
+        width: 95%;
+    }
+
+    .calculator {
+        width: 97%;
+    }
+
+    footer {
+        width: 95%;
+    }
+
+    .coin-and-ticker input {
+        width: 5em;
+        margin-right: 1em;
+    }
+}
+
+/* Tablet */
+@media (max-width: 940px) {
+    header {
+        width: 95%;
+    }
+
+    .total-amounts {
+        width: 97%;
+    }
+
+    .calculator {
+        width: 99%;
+        margin-top: .7em;
+    }
+
+    footer {
+        width: 96%;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+    
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: .8rem;
+    }
+
+    .middle-totals {
+        background: linear-gradient(-45deg,#f8b94c, #e2c167);
+        border-radius: 30px;
+        padding: 1em 3em;
+    }
+
+    .coin-and-ticker input {
+        width: 4em;
+    }
+
+    #asset-liquid {
+        width: 22%;
+    }
+    
+    .liquid {
+        justify-content: center;
+        width: 5em;
+    }
+
+    .liquid-coin-price {
+        padding: 0 1em;
+        /* margin-left: auto; */
+        text-align: right;
+    }
+}
+
+/* Breakpoint for Footer */
+@media (max-width: 774px) {
+    .contact img {
+        width: 30px;
+    }
+
+    #donate {
+        font-size: 1.1rem;
+    }
+
+    #creator {
+        font-size: 1.1rem;
+    }
+}
+
+/* Smaller Tablet */
+@media (max-width: 720px) {
+    .middle-totals {
+        padding: .5em 1em;
+    }
+
+    .supply {
+        width: 70%;
+    }
+
+    #asset-liquid {
+        width: 25%;
+    }
+
+    .borrow {
+        margin-top: .7em;
+        width: 97%;
+    }
+
+    .liquid-coin-price {
+        width: 100%;
+        text-align: right;
+    }
+
+    .contact {   
+        margin-top: 1em;
+        text-align: center;
+    }
+
+    .contact a {
+        padding: .3em;
+    }
+}
+
+/* Mobile */
+@media (max-width: 470px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .logo-container img {
+        margin-left: .7em;
+    }
+
+    .total-amounts {
+        flex-direction: column;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .supply-balance,
+    .borrow-balance {
+        margin: 0;
+        padding-bottom: 1em;
+    }
+
+    .middle-totals {
+        padding: 1em 3em;
+    }
+
+
+    .supply {
+        width: 97%;
+    }
+    
+    .calculator {
+        margin-top: .5em;
+    }
+
+    #asset-liquid {
+        margin-top: .5em;
+        width: 97%;
+    }
+
+    #asset-liquid .coin-flex {
+        height: 1em;
+    }
+
+    .liquid {
+        width: 9em;
+    }
+    
+    .liquid-coin-price {
+        margin: 0 auto;
+        text-align: right;
+    }
+}
+
+/* Fixing footer for small phones */
+@media (max-width: 401px) {
+    footer p {
+        font-size: .6rem;
+    }
+
+    #copyright {
+        font-size: 1rem;
+    }
+
+    .contact {   
+        margin: 0 auto;
+        text-align: center;
+    }
+}

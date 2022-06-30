@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <script data-ad-client="ca-pub-5308141991739703" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DJGGB5JW13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-DJGGB5JW13');
+    </script>
+    <title>Liquidation Calculator</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <!-- Logo -->
+            <img src="Vigor.png" alt="Venus Logo">
+        </div>
+        <nav>
+            <!-- <ul class="nav-links"> -->
+                <!-- <li class="nav-link"><a href="#"></a></li> -->
+                <!-- <li class="nav-link"><a href="#"></a></li> -->
+                <!-- <li class="nav-link"><a href="#">Contact</a></li> -->
+            <!-- </ul> -->
+            <a href="#donate"><button id="donate-button">Donate</button></a>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Vigor 
+        <br>Liquidation Calculator</h1>
+        
+        <!-- Totals -->
+        <section class="total-amounts flex">
+            <div class="supply-balance">
+                <br>
+                <h2>Supply Balance</h2>
+                <h3 id="total-supply">$0</h3>
+            </div>
+            <div class="middle-totals">
+                <h2>Available Credit</h2>
+                <h3 id="available-credit">$0</h3>
+                <p>Credit Used: <span id="amount-used-ac">0%</span></p>
+                
+                <h2 class="liquid-event-text">Liquidation Event</h2>
+                <h3 id="liquid-event">$0</h3>
+                <!-- Percentage Bar -->
+                <p>% till Liquidation: <span id="liquid-percent">0%</span></p>
+                <p>$ till Liquidation: $<span id="other-liquid">0</span></p>
+            </div>
+            <div class="borrow-balance">
+                <br>
+                <h2 class="borrow-balance-text">Borrow Balance</h2>
+                <h3 id="total-borrow" class="borrow-balance-text">$0</h3>
+            </div>
+        </section>
+        
+        <!-- Calculator -->
+        <section class="calculator">
+            <div id="google1">
+                <!-- Google Ad -->
+            </div>
+            
+            <div class="supply calc-containers">
+                <h2>Supply</h2>
+                <div id="supply-side" class="descriptions">
+                    <div class="coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="./img/BTCB.png" alt="" height="43px"/>
+                            <p>BTC</p>
+                            <input class="bitcoin" type="number" min="0" name="bitcoin" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="bitcointotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="bitcoinprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="./img/SXP.png" alt="" height="43px">
+                            <p>SXP</p>
+                            <input class="swipe" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="swipetotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="swipeprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="./img/XVS.png" alt="" height="43px">
+                            <p>XVS</p>
+                            <input class="venus" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="venustotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="venusprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="./img/USDC.png" alt="" height="43px">
+                            <p>USDC</p>
+                            <input class="usd-coin" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="usd-cointotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="usd-coinprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="./img/USDT.png" alt="" height="43px">
+                            <p>USDT</p>
+                            <input class="tether" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="tethertotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="tetherprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="./img/BUSD.png" alt="" height="43px">
+                            <p>BUSD</p>
+                            <input class="binance-usd" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="binance-usdtotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="binance-usdprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="./img/ETH.png" alt="" height="43px">
+                            <p>ETH</p>
+                            <input class="ethereum" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="ethereumtotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="ethereumprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="./img/LTC.png" alt="" height="43px">
+                            <p>LTC</p>
+                            <input class="litecoin" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="litecointotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="litecoinprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="./img/XRP.png" alt="" height="43px">
+                            <p>XRP</p>
+                            <input class="ripple" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="rippletotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="rippleprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="./img/BCH.png" alt="" height="43px">
+                            <p>BCH</p>
+                            <input class="bitcoin-cash" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="bitcoin-cashtotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="bitcoin-cashprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="./img/DOT.png" alt="" height="43px">
+                            <p>DOT</p>
+                            <input class="polkadot" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="polkadottotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="polkadotprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="./img/LINK.png" alt="" height="43px">
+                            <p>LINK</p>
+                            <input class="chainlink" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="chainlinktotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="chainlinkprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="./img/DAI.png" alt="" height="43px">
+                            <p>DAI</p>
+                            <input class="dai" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="daitotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="daiprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="./img/FIL.png" alt="" height="43px">
+                            <p>FIL</p>
+                            <input class="filecoin" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="filecointotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="filecoinprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="./img/BNB.png" alt="" height="43px">
+                            <p>BNB</p>
+                            <input class="binancecoin" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="binancecointotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="binancecoinprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="./img/BETH.png" alt="" height="43px">
+                            <p>BETH</p>
+                            <input class="binance-eth" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="binance-ethtotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="binance-ethprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="./img/ADA.png" alt="" height="40px">
+                            <p>ADA</p>
+                            <input class="cardano" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="cardanototal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="cardanoprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="./img/VAI.png" alt="" height="40px">
+                            <p>VAI</p>
+                            <input class="vai" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="vaitotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="vaiprice"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="asset-liquid">
+                <h2>Liquidation Price 
+                <br>Per Coin</h2>
+                <div class="liquid coin-flex">
+                    <p>BTC</p>
+                    <!-- <img src="./img/BTCB.png" alt="" height="45px"> -->
+                    <p class="liquid-coin-price bitcoin">$0</p>
+                </div>
+                <div class="liquid coin-flex">
+                    <p>SXP</p>
+                    <!-- <img src="./img/SXP.png" alt="" height="45px"> -->
+                    <p class="liquid-coin-price swipe">$0</p>
+                </div>
+                <div class="liquid coin-flex">
+                    <p>XVS</p>
+                    <p class="liquid-coin-price venus">$0</p>
+                </div>
+                <div class="liquid coin-flex">
+                    <p>USDC</p>
+                    <p class="liquid-coin-price usd-coin">$0</p>
+                </div>
+                <div class="liquid coin-flex">
+                    <p>USDT</p>
+                    <p class="liquid-coin-price tether">$0</p>
+                </div>
+                <div class="liquid coin-flex">
+                    <p>BUSD</p>
+                    <p class="binance-usd liquid-coin-price">$0</p>
+                </div>
+                <div class="liquid coin-flex">
+                    <p>ETH</p>
+                    <p class="ethereum liquid-coin-price">$0</p>
+                </div>
+                <div class="liquid coin-flex">
+                    <p>LTC</p>
+                    <p class="litecoin liquid-coin-price">$0</p>
+                </div>
+                <div class="liquid coin-flex">
+                    <p>XRP</p>
+                    <p class="ripple liquid-coin-price">$0</p>
+                </div>
+                <div class="liquid coin-flex">
+                    <p>BCH</p>
+                    <p class="bitcoin-cash liquid-coin-price">$0</p>
+                </div>
+                <div class="liquid coin-flex">
+                    <p>DOT</p>
+                    <p class="polkadot liquid-coin-price">$0</p>
+                </div>
+                <div class="liquid coin-flex">
+                    <p>LINK</p>
+                    <p class="chainlink liquid-coin-price">$0</p>
+                </div>
+                <div class="liquid coin-flex">
+                    <p>DAI</p>
+                    <p class="dai liquid-coin-price">$0</p>
+                </div>
+                <div class="liquid coin-flex">
+                    <p>FIL</p>
+                    <p class="filecoin liquid-coin-price">$0</p>
+                </div>
+                <div class="liquid coin-flex">
+                    <p>BNB</p>
+                    <p class="binancecoin liquid-coin-price">$0</p>
+                </div>
+                <div class="liquid coin-flex">
+                    <p>BETH</p>
+                    <p class="binance-eth liquid-coin-price">$0</p>
+                </div>
+                <div class="liquid coin-flex">
+                    <p>ADA</p>
+                    <p class="cardano liquid-coin-price">$0</p>
+                </div>
+                <div class="liquid coin-flex">
+                    <p>VAI</p>
+                    <p class="vai liquid-coin-price">$0</p>
+                </div>
+            </div>
+
+            <!-- Borrow Side -->
+            <div class="borrow calc-containers">
+                <h2>Borrow</h2>
+                <div id="borrow-side" class="descriptions">
+                    <div class="bitcoin-supply coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="BTCB.png" alt="" height="43px">
+                            <p>BTC</p>
+                            <input class="bitcoin" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="bitcointotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="bitcoinprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="swipe-supply coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="SXP.png" alt="" height="43px">
+                            <p>SXP</p>
+                            <input class="swipe" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="swipetotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="swipeprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="venus-supply coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="XVS.png" alt="" height="43px">
+                            <p>XVS</p>
+                            <input class="venus" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="venustotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="venusprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="usdc-supply coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="USDC.png" alt="" height="43px">
+                            <p>USDC</p>
+                            <input class="usd-coin" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="usd-cointotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="usd-coinprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="tether-supply coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="USDT.png" alt="" height="43px">
+                            <p>USDT</p>
+                            <input class=tether type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="tethertotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="tetherprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="binanceusd-supply coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="BUSD.png" alt="" height="43px">
+                            <p>BUSD</p>
+                            <input class="binance-usd" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="binance-usdtotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="binance-usdprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="ethereum-supply coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="ETH.png" alt="" height="43px">
+                            <p>ETH</p>
+                            <input class="ethereum" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="ethereumtotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="ethereumprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="litecoin-supply coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="LTC.png" alt="" height="43px">
+                            <p>LTC</p>
+                            <input class="litecoin" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="litecointotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="litecoinprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="ripple-supply coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="XRP.png" alt="" height="43px">
+                            <p>XRP</p>
+                            <input class="ripple" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="rippletotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="rippleprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="bitcoincash-supply coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="BCH.png" alt="" height="43px">
+                            <p>BCH</p>
+                            <input class="bitcoin-cash" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="bitcoin-cashtotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="bitcoin-cashprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="polkadot-supply coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="DOT.png" alt="" height="43px">
+                            <p>DOT</p>
+                            <input class="polkadot" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="polkadottotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="polkadotprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="chainlink-supply coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="LINK.png" alt="" height="43px">
+                            <p>LINK</p>
+                            <input class="chainlink" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="chainlinktotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="chainlinkprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="dai-supply coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="DAI.png" alt="" height="43px">
+                            <p>DAI</p>
+                            <input class="dai" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="daitotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="daiprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="filecoin-supply coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="FIL.png" alt="" height="43px">
+                            <p>FIL</p>
+                            <input class="filecoin" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="filecointotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="filecoinprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="binancecoin-supply coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="BNB.png" alt="" height="43px">
+                            <p>BNB</p>
+                            <input class="binancecoin" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="binancecointotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="binancecoinprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="binanceeth-supply coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="BETH.png" alt="" height="43px">
+                            <p>BETH</p>
+                            <input class="binance-eth" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="binance-ethtotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="binance-ethprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="cardano-supply coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="ADA.png" alt="" height="40px">
+                            <p>ADA</p>
+                            <input class="cardano" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="cardanototal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="cardanoprice"></span></p>
+                        </div>
+                    </div>
+                    <div class="vai-supply coin-flex">
+                        <div class="coin-and-ticker">
+                            <img src="VAI.png" alt="" height="40px">
+                            <p>VAI</p>
+                            <input class="vai" type="number" min="0" name="" placeholder="0" autocomplete="off">
+                        </div>
+                        <div class="total-coin-price">
+                            <p class="vaitotal">Total: $0</p>
+                            <hr>
+                            <p>Price: <span class="vaiprice"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="google2">
+                
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <hr>
+        <br>
+        <div class="donation">
+            <div>
+                <p id="donate">Donate</p>
+                </p>
+                <p>  </p>
+                <p>  </p>
+            </div>
+            <div class="contact">
+                <div class="adrian">
+                    <p id="creator">Contact me!</p>
+                    <a href="mailto:abhimishrasultanpur4@gmail.com" target="_blank"><img src="gmail.gif" alt="Gmail Icon" width="55"></a>
+                    <a href="http://www.instagram.com/me_abhimishra4u" target="_blank" rel="noopener noreferrer">
+                        <img src="instagram.gif" alt="Instagram logo" width="50"></a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <p id="copyright">Copyright Crypto Calculator 2021</p>
+        <br>
+    </footer>
+</body>
+</html> 
