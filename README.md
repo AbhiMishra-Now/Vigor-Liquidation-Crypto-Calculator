@@ -9,7 +9,7 @@
 
 <div>
      <ul>
-             <li>Vigor Liquidation Crypto Calculator where you can check your Borrow balance, Supply balance, Available credit, and Liquidation events. </li>
+             <li>Vigor Liquidation Crypto Calculator where you can check Borrow balance, Supply balance, Available credit, and Liquidation events. </li>
               <li>Created using Html, Css, and Javascript using CoinGecko API </li>
                <li>We can obtain cryptocurrency data from CoinGecko like price, volume, market cap, and exchange data.  </li>
      </ul>
